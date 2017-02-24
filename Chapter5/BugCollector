@@ -1,4 +1,3 @@
-_author_ = "amber buckley"
 
 # description: design a program that keeps a running tally of bugs collected for up to 7 days
 #
@@ -13,7 +12,34 @@ _author_ = "amber buckley"
 # end for
 # display "the total bugs this week is, total"
 
+number_of_bugs# description: design a program that keeps a running tally of bugs collected for up to 7 days
+#
+# declare number of bugs
+# declare accumulator total = 0
+# declare counter variable
+# display intro message
+# for counter = 1 To 7
+#   display "How many bugs did you collect today?"
+#   input number_of_bugs
+#   set total = total + number_of_bugs
+# end for
+# display "the total bugs this week is, total"
+
 number_of_bugs = 0
+counter = 0
+total = 0
+def bug_collector_count():
+    print("This program will add up how many bugs you collected in 7 days.")
+    total = get_bugs_collected()
+    print("You collected", total, "bugs this week.")
+
+def get_bugs_collected(): #get number of bugs from each day and tally the total
+    total = 0
+    for i in range(0, 7):
+        number_of_bugs = int(input("How many bugs did you collect today (day" + str(i + 1) + ")?"))
+        total += number_of_bugs
+    return total
+bug_collector_count() = 0
 counter = 0
 total = 0
 def bug_collector_count():
